@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PermissionsUISample.Views.PermissionUngrantedPage"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+             Title="Permission">
+    <ContentPage.Content>
+        <StackLayout Spacing="30"
+                     Padding="30">
+            <Image Source="ic_camerafullsize"
+                   VerticalOptions="CenterAndExpand"
+                   HeightRequest="200"
+                   HorizontalOptions="FillAndExpand"/>
+
+              <Label Text="Your camera permission is disabled :( "
+                     FontAttributes="Bold"
+                   TextColor="#3C2820"
+                   FontSize="Large"
+                   HorizontalTextAlignment="Center"/>
+
+            <Label Text="This app needs access to your cam, which is required for Augmented reality."
+                   TextColor="#3C2820"
+                   FontSize="Large"
+                   HorizontalTextAlignment="Center"/>
+
+             <Button Text="Go to settings"
+                     Margin="10,0"
+                     VerticalOptions="EndAndExpand"
+                      Command="{Binding GoSettingsCommand}"
+                      CornerRadius="20"
+                      FontSize="20"
+                      TextColor="White"
+                      BackgroundColor="#EE7E4C" />
+
+              <Label Text="Use the app without the camera"
+                   TextColor="#EE7E4C"
+                   FontSize="Medium"
+                   HorizontalTextAlignment="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

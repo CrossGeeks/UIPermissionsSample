@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PermissionsUISample.Views.SinglePermissionPage"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+             Title="Permission">
+    <ContentPage.Content>
+        <StackLayout Spacing="30"
+                     Padding="30">
+            <Image Source="ic_camerafullsize"
+                   VerticalOptions="CenterAndExpand"
+                   HeightRequest="300"
+                   HorizontalOptions="FillAndExpand"/>
+
+              <Label Text="Camera permission needed"
+                     FontAttributes="Bold"
+                   TextColor="#3C2820"
+                   FontSize="Large"
+                   HorizontalTextAlignment="Center"/>
+
+            <Label Text="This app needs access to your cam, which is required for Augmented reality. If you don't feel comfortable with this permission, you can go to settings and modify it at any time."
+                   TextColor="#3C2820"
+                   FontSize="Large"
+                   HorizontalTextAlignment="Center"/>
+
+             <Button Text="Turn on"
+                     Margin="10,0"
+                     VerticalOptions="EndAndExpand"
+                      Command="{Binding GoHomeCommand}"
+                      CornerRadius="20"
+                      FontSize="20"
+                      TextColor="White"
+                      BackgroundColor="#EE7E4C" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
